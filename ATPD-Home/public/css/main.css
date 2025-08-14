@@ -1,0 +1,150 @@
+/* Basis Stile */
+:root {
+  /* Light-Mode (Default) */
+  --bg-color: #eee;
+  --text-color: #111;
+  --header-bg: radial-gradient(#ddd, #fff, #fff 150%);
+  --header-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  --header-title-color: #555;
+  --footer-bg: #f5f5f5;
+  --footer-text: #222;
+  --footer-link: #222;
+  --heading-color: #555;
+  --link-card-bg: #e0e0e0;
+  --link-card-hover: #ccc;
+  --link-card-text: #222;
+  --theme-btn-bg: #e0e0e0;
+  --theme-btn-hover: #b8b8b8;
+  --theme-btn-text: #222222;
+  --theme-btn-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+:root[data-theme="dark"] {
+  /* Dark-Mode Overrides */
+  --bg-color: #111;
+  --text-color: #eee;
+  --header-bg: radial-gradient(#2d2d2d, #222, #000 150%);
+  --header-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  --header-title-color: #8fa3b2;
+  --footer-bg: #222;
+  --footer-text: #fff;
+  --footer-link: #fff;
+  --heading-color: #8fa3b2;
+  --link-card-bg: #444;
+  --link-card-hover: #555;
+  --link-card-text: #fff;
+  --theme-btn-bg: #444444;
+  --theme-btn-hover: #4a4a4a;
+  --theme-btn-text: #ffffff;
+  --theme-btn-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--bg-color);
+}
+
+/* Header Stile */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--header-bg);
+  box-shadow: var(--header-shadow);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 1rem;
+}
+
+.header-title {
+  font-size: 1.8rem;
+  margin: 0;
+  color: var(--header-title-color);
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Footer Stile */
+footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+}
+
+footer a {
+  color: var(--footer-link);
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Allgemeine Typografie */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+}
+
+/* Link Cards */
+.link-card {
+  padding: 0.5rem 1rem;
+  background-color: var(--link-card-bg);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--link-card-text);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.link-card:hover {
+  background-color: var(--link-card-hover);
+}
+
+/* Theme Button */
+.theme-button {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  border: none;
+  box-shadow: var(--theme-btn-shadow);
+  background-color: var(--theme-btn-bg);
+  color: var(--theme-btn-text);
+  width: auto;
+  height: auto;
+}
+
+.theme-button:hover {
+  background-color: var(--theme-btn-hover);
+  transform: none;
+}

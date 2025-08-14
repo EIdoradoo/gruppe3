@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>ATPD-Home</title>
+  <link rel="stylesheet" href="css/main.css" id="main-stylesheet">
+  <link rel="stylesheet" href="css/index.css" id="page-stylesheet">
+  <link rel="icon" href="img/Icon_Koch.png" type="image/x-icon">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-left">
+    <img src="img/Icon_Koch.png" alt="Koch Icon" class="logo">
+    <h1 class="header-title">ATPD</h1>
+  </div>
+  <nav class="nav">
+    <a class="link-card" href="yuumibook-read.html">📘 Yuumi Recipe Book</a>
+    <a class="link-card" href="logs">📝 Log System</a>
+    <a class="link-card" href="yuumibook-write.html">➕ Rezept erstellen</a>
+    <button id="theme-toggle" class="link-card theme-button">
+      <span id="theme-icon">🌙</span>
+    </button>
+  </nav>
+</header>
+
+<main>
+  <section class="intro-section">
+    <div class="intro-wrapper">
+      <img src="img/Icon_Koch.png" alt="Koch Icon" class="intro-icon">
+      <div class="intro-text">
+        <h2 class="brand-title">ATPD</h2>
+        <h3>Alle Tage: Planung & Dinner</h3>
+        <p>Diese Seite ist ein digitales Rezeptbuch mit integrierter Datenbank.<br>Sie können Rezepte durchsuchen, hinzufügen und verwalten.</p>
+        <p><em>Kochen mit Herz – unser Motto!</em></p>
+      </div>
+    </div>
+  </section>
+
+  <h2 class="section-title">Gerichte der Woche</h2>
+
+  <section class="slider-container">
+    <div class="slider" id="recipeSlider">
+      <div class="slide"><img src="img/Brokkoli_Auflauf.jpg" alt="Brokkoli Auflauf"><div class="slide-text"><h2>Brokkoli Auflauf</h2><p>Gesunder Genuss mit Brokkoli und Käse.</p>
+        <a href="/recipe?id=135349&servings=4">Hier zum Rezept</a></div></div>
+      <div class="slide"><img src="img/Cabonara.jpg" alt="Carbonara"><div class="slide-text"><h2>Carbonara</h2><p>Italienisch, cremig, schnell gemacht!</p>
+        <a href="/recipe?id=135010&servings=4">Hier zum Rezept</a></div></div>
+      <div class="slide"><img src="img/Chickenwings.jpg" alt="Chickenwings"><div class="slide-text"><h2>Chickenwings</h2><p>Würzige Hähnchenflügel für den Snackabend.</p>
+        <a href="/recipe?id=135622&servings=4">Hier zum Rezept</a></div></div>
+      <div class="slide"><img src="img/Gemuesepfanne.jpg" alt="Gemüsepfanne"><div class="slide-text"><h2>Gemüsepfanne</h2><p>Wokgemüse trifft Sojasauce.</p>
+        <a href="/recipe?id=135541&servings=4">Hier zum Rezept</a></div></div>
+      <div class="slide"><img src="img/Huenchen_Reis.jpg" alt="Hühnchen mit Reis"><div class="slide-text"><h2>Hühnchen mit Reis</h2><p>Asiatisch angehaucht, lecker & leicht.</p>
+        <a href="/recipe?id=135230&servings=4">Hier zum Rezept</a></div></div>
+      <div class="slide"><img src="img/Pfannkuchen.jpg" alt="Pfannkuchen"><div class="slide-text"><h2>Pfannkuchen</h2><p>Süß oder herzhaft – immer ein Genuss.</p>
+        <a href="/recipe?id=135205&servings=4">Hier zum Rezept</a></div></div>
+      <div class="slide"><img src="img/Wraps.jpg" alt="Wraps"><div class="slide-text"><h2>Wraps</h2><p>Wrap it up – ideal zum Mitnehmen!</p>
+        <a href="/recipe?id=134968&servings=4">Hier zum Rezept</a></div></div>
+    </div>
+    <div class="slider-buttons">
+      <button class="slider-button" id="prevButton">&#10094;</button>
+      <button class="slider-button" id="nextButton">&#10095;</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Hochschule des Bundes<br>
+  <h6>DACS 23/10-01</h6>
+  <a href="datenschutz.html">Datenschutzerklärung</a>
+  <a href="impressum.html">Impressum</a>
+</footer>
+
+<script src="js/colorscheme.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

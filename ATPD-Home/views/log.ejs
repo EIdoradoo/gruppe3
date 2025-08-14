@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Log System</title>
+  <link rel="stylesheet" href="css/main.css" id="main-stylesheet">
+  <link rel="stylesheet" href="css/log.css">
+  <link rel="icon" href="img/Icon_Koch.png" type="image/x-icon">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-left">
+    <a href="index.html" class="logo" style="display: contents;">
+      <img src="img/Icon_Koch.png" alt="Koch Icon" class="logo">
+      <h1 class="header-title">ATPD</h1>
+    </a>
+  </div>
+  <nav class="nav">
+    <a class="link-card" href="index.html">🏠 Startseite</a>
+    <a class="link-card" href="yuumibook-read.html">📘 Yuumi Recipe Book</a>
+    <a class="link-card" href="yuumibook-write.html">➕ Rezept erstellen</a>
+    <button id="theme-toggle" class="link-card theme-button">
+      <span id="theme-icon">🌙</span>
+    </button>
+  </nav>
+</header>
+
+<script>
+    let expanded = true;
+    function toggleMetadata(sender) {
+      const cells = document.querySelectorAll(".metadata-cell");
+      cells.forEach(cell => {
+        if (expanded)
+          cell.classList.add("collapsed");
+        else
+          cell.classList.remove("collapsed");
+      });
+      sender.innerHTML = expanded ? "Expand" : "Collapse";
+      expanded = !expanded;
+    }
+</script>
+
+<table style="margin-top:15px">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Timestamp</th>
+            <th>Message</th>
+            <th>User IP</th>
+            <th>Metadata <button onclick="toggleMetadata(this)">Collapse</button></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% data.forEach(function(entry) { %>
+            <tr onclick="highlightRow(this)">
+                <td><%= entry.id %></td>
+                <td><%= entry.timestamp %></td>
+                <td><%= entry.message %></td>
+                <td><%= entry.ip %></td>
+                <td class="metadata-cell">
+                    <% Object.entries(JSON.parse(entry.metadata)).forEach(([key, value]) => { %>
+                        <%= key %>: <%= typeof value === 'object' ? JSON.stringify(value) : value %><br>
+                    <% }) %>
+                </td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+
+</body>
+<script>
+  function highlightRow(row) {
+    // Alle anderen Zeilen deselektieren
+    const rows = document.querySelectorAll("tbody tr");
+    rows.forEach(r => r.classList.remove("selected"));
+
+    // Geklickte Zeile markieren
+    row.classList.add("selected");
+  }
+</script>
+
+<script src="js/colorscheme.js"></script>
+
+<footer>
+  Hochschule des Bundes<br>
+  <h6>DACS 23/10-01</h6>
+  <a href="datenschutz.html">Datenschutzerklärung</a>
+  <a href="impressum.html">Impressum</a>
+</footer>
+</html>

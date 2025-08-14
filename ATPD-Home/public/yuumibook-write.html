@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Yuumibook Rezept erstellen</title>
+  <link rel="stylesheet" href="css/main.css" id="main-stylesheet">
+  <link rel="stylesheet" href="css/yuumibook-write.css">
+  <link rel="icon" href="img/Icon_Koch.png" type="image/x-icon">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-left">
+    <a href="index.html" class="logo" style="display: contents;">
+      <img src="img/Icon_Koch.png" alt="Koch Icon" class="logo">
+      <h1 class="header-title">ATPD</h1>
+    </a>
+  </div>
+  <nav class="nav">
+    <a class="link-card" href="index.html">🏠 Startseite</a>
+    <a class="link-card" href="yuumibook-read.html">📘 Yuumi Recipe Book</a>
+    <a class="link-card" href="logs">📝 Log System</a>
+    <button id="theme-toggle" class="link-card theme-button">
+      <span id="theme-icon">🌙</span>
+    </button>
+  </nav>
+</header>
+
+<main>
+  <h2>Rezept erstellen</h2>
+    <section class="general-section">
+      <h3>Allgemeines</h3>
+
+      <div class="form-group">
+        <label for="titleText">Rezepttitel</label>
+        <p class="hint">Wie heißt dein Rezept?</p>
+        <input type="text" id="titleText">
+      </div>
+
+      <div class="form-group">
+        <label for="author">Autor</label>
+        <p class="hint">Wer hat das Rezept erstellt?</p>
+        <input type="text" id="author">
+      </div>
+
+      <div class="form-group">
+        <div>Portionen</div>
+        <p class="hint">Für wie viele Personen ist das Rezept?</p>
+        <select id="portions">
+          <option value="1">1 Portion</option>
+          <option value="2">2 Portionen</option>
+          <option value="3">3 Portionen</option>
+          <option value="4" selected>4 Portionen</option>
+          <option value="5">5 Portionen</option>
+          <option value="6">6 Portionen</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="ingredients-section">
+      <h3>Zutaten</h3>
+      <p class="section-description">Welche Zutaten werden für dein Rezept benötigt?</p>
+
+      <div class="ingredient-list" id="recipeBuilderIngredients">
+        <div class="ingredient-container" id="ing1">
+          <div class="ingredient-row">
+            <div class="form-group">
+              <input class="ingredient_amount" type="text" id="ing1_amount"
+                     placeholder="Menge" inputmode="numeric" pattern="[0-9]*"
+                     oninput="onAmountChange(this)"/>
+            </div>
+            <div class="form-group">
+              <select class="ingredient_unit" id="ing1_unit" name="unit" onchange="onUnitChange(1)">
+                <option value="g">g</option>
+                <option value="kg">kg</option>
+                <option value="ml">ml</option>
+                <option value="L">L</option>
+                <option value="EL">EL</option>
+                <option value="TL">TL</option>
+                <option value="etwas">etwas</option>
+                <option value="Pck">Pck</option>
+              </select>
+            </div>
+            <div class="form-group name-group">
+              <input class="ingredient_name" type="text" id="ing1_name" placeholder="Zutat">
+            </div>
+            <button type="button" class="remove-btn" onclick="removeIngredient(1)">×</button>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="add-btn" onclick="addIngredient()">+ Zutat hinzufügen</button>
+    </section>
+
+    <section class="description-section">
+      <h3>Beschreibung</h3>
+      <p class="section-description">Gib eine detaillierte Beschreibung der Zubereitung ein.</p>
+      <textarea id="description" class="description-text" placeholder="Beschreibe hier die Zubereitung..."></textarea>
+
+      <div class="tags-section">
+        <h4>Tags</h4>
+        <p class="section-description">Wähle passende Kategorien für dein Rezept:</p>
+        <div class="tags-container">
+          <button type="button" class="tag-btn" data-tag="vegan">Vegan</button>
+          <button type="button" class="tag-btn" data-tag="vegetarisch">Vegetarisch</button>
+          <button type="button" class="tag-btn" data-tag="vorspeise">Vorspeise</button>
+          <button type="button" class="tag-btn" data-tag="hauptspeise">Hauptspeise</button>
+          <button type="button" class="tag-btn" data-tag="nachspeise">Nachspeise</button>
+          <button type="button" class="tag-btn" data-tag="suppe">Suppe</button>
+          <button type="button" class="tag-btn" data-tag="salat">Salat</button>
+          <button type="button" class="tag-btn" data-tag="fleischgericht">Fleischgericht</button>
+          <button type="button" class="tag-btn" data-tag="backen">Backen</button>
+          <button type="button" class="tag-btn" data-tag="einfach">Einfach</button>
+          <button type="button" class="tag-btn" data-tag="glutenfrei">Glutenfrei</button>
+          <button type="button" class="tag-btn" data-tag="laktosefrei">Laktosefrei</button>
+          <button type="button" class="tag-btn" data-tag="asiatisch">Asiatisch</button>
+        </div>
+      </div>
+    </section>
+
+    <button onclick="writeRecipe()" class="submit-btn">Rezept speichern</button>
+</main>
+
+<div id="write-answer">
+  <div></div>
+  <br>
+  <button onclick="document.getElementById('write-answer').style.display = 'none';">Erneut versuchen</button>
+</div>
+
+<footer>
+  Hochschule des Bundes<br>
+  <h6>DACS 23/10-01</h6>
+  <a href="datenschutz.html">Datenschutzerklärung</a>
+  <a href="impressum.html">Impressum</a>
+</footer>
+
+<script src="js/yuumibook-write.js"></script>
+<script src="js/colorscheme.js"></script>
+</body>
+</html>
+

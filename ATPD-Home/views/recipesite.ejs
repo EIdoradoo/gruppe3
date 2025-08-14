@@ -1,0 +1,115 @@
+<% /** @param {number} multiplicator */ %>
+<% /** @param {number} requestedServings */ %>
+<% /** @param {data} data */ %>
+<%
+/**
+ * @typedef {Object} data
+ * @property {string} title
+ * @property {string} author
+ * @property {string} instructions
+ * @property {number} servings
+ * @property {string[]} tags
+ * @property {Array<{
+ *    amount: (number|null),
+ *    unit:   (string|null),
+ *    ingredient: string
+ * }>} ingredients
+ *
+ * @typedef {number} multiplicator
+ * @typedef {number} requestedServings
+ */
+%>
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title><%=data.title%></title>
+  <link rel="stylesheet" href="css/main.css" id="main-stylesheet">
+    <link rel="stylesheet" href="css/recipesite.css" id="main-stylesheet">
+  <link rel="icon" href="img/Icon_Koch.png" type="image/x-icon">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-left">
+    <a href="index.html" class="logo" style="display: contents;">
+      <img src="img/Icon_Koch.png" alt="Koch Icon" class="logo">
+      <h1 class="header-title">ATPD</h1>
+    </a>
+  </div>
+  <nav class="nav">
+    <a class="link-card" href="index.html">🏠 Startseite</a>
+    <a class="link-card" href="yuumibook-read.html">📘 Yuumi Recipe Book</a>
+    <a class="link-card" href="logs">📝 Log System</a>
+    <a class="link-card" href="yuumibook-write.html">➕ Rezept erstellen</a>
+    <button id="theme-toggle" class="link-card theme-button">
+      <span id="theme-icon">🌙</span>
+    </button>
+  </nav>
+</header>
+
+<div class="recipe-card">
+    <h4 id="atpd-watermark" style="display:none">Recipe from ATPD-Recipes (http://localhost:3001/yuumibook-read.html)</h4>
+    <h2><%=data.title%></h2>
+    <div class="author">Von <%=data.author%></div>
+
+    <div class="servings-control">
+        <label for="servings">Portionen:</label>
+        <input type="number" id="servings" value="<%=requestedServings%>" min="1">
+        <button class="calculate-btn" onclick="onServingsChange()">Berechnen</button>
+    </div>
+
+    <div class="ingredients">
+        <h3>Zutaten</h3>
+        <ul id="ingredientsList">
+            <% data.ingredients.forEach(function(entry) { %>
+            <li>
+                <%=
+                    (entry.amount == null ? "" : Number((entry.amount * multiplicator).toFixed(2))) + " " +
+                    (entry.unit == null ? "" : entry.unit) + " " +
+                    entry.ingredient
+                %>
+            </li>
+            <% }); %>
+        </ul>
+    </div>
+
+    <div class="instructions">
+        <h3>Zubereitung</h3>
+        <div class="instructions-content"><%=data.instructions%></div>
+    </div>
+
+    <% if(data.tags && data.tags.length > 0) { %>
+    <div class="tags-section">
+        <h3>Tags</h3>
+        <div class="tags-container">
+            <% data.tags.forEach(function(tag) { %>
+            <span class="tag"><%=tag%></span>
+            <% }); %>
+        </div>
+    </div>
+    <% } %>
+</div>
+
+</div>
+<div class="recipe-actions">
+    <button class="action-btn print-btn" onclick="printRecipe()">
+        <span class="icon">🖨️</span> Drucken
+    </button>
+    <button class="action-btn delete-btn" onclick="deleteRecipe('<%=data.id%>')">
+        <span class="icon">🗑️</span> Löschen
+    </button>
+</div>
+<footer>
+  Hochschule des Bundes<br>
+  <h6>DACS 23/10-01</h6>
+  <a href="datenschutz.html">Datenschutzerklärung</a>
+  <a href="impressum.html">Impressum</a>
+</footer>
+
+</body>
+
+<script src="js/colorscheme.js"></script>
+<script src="js/recipesite.js"></script>
+</html>

@@ -1,0 +1,117 @@
+/* Basis Stile */
+:root {
+  /* Light-Mode (Default) */
+  --slide-text-bg: rgba(255, 255, 255, 0.85);
+  --slide-text-color: #000;
+  --slide-link-color: #000;
+  --slider-btn-bg: #fff;
+  --slider-btn-border: #aaa;
+  --slider-btn-hover: #eee;
+}
+
+:root[data-theme="dark"] {
+  /* Dark-Mode Overrides */
+  --slide-text-bg: rgba(0, 0, 0, 0.7);
+  --slide-text-color: #eee;
+  --slide-link-color: #fff;
+  --slider-btn-bg: #444;
+  --slider-btn-border: #777;
+  --slider-btn-hover: #555;
+}
+
+/* Hauptinhalt Stile */
+.intro-section {
+  margin-bottom: 2rem;
+}
+
+.intro-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.intro-icon {
+  height: 160px;
+}
+
+.brand-title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+/* Slider Stile */
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  height: 70vh;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.slide-text {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 90%;
+  background-color: var(--slide-text-bg);
+  color: var(--slide-text-color);
+}
+
+.slide-text a {
+  font-weight: bold;
+  text-decoration: underline;
+  color: var(--slide-link-color);
+}
+
+.slider-buttons {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 0 1rem;
+  pointer-events: none;
+}
+
+.slider-button {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  pointer-events: all;
+  background-color: var(--slider-btn-bg);
+  border: 1px solid var(--slider-btn-border);
+}
+
+.slider-button:hover {
+  background-color: var(--slider-btn-hover);
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Yuumi Recipe Book</title>
+  <link rel="stylesheet" href="css/main.css" id="main-stylesheet">
+  <link rel="stylesheet" href="css/yuumibook-read.css">
+  <link rel="icon" href="img/Icon_Koch.png" type="image/x-icon">
+  <script src="js/yuumibook-read.js"></script>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-left">
+    <a href="index.html" class="logo" style="display: contents;">
+      <img src="img/Icon_Koch.png" alt="Koch Icon" class="logo">
+      <h1 class="header-title">ATPD</h1>
+    </a>
+  </div>
+  <nav class="nav">
+    <a class="link-card" href="index.html">🏠 Startseite</a>
+    <a class="link-card" href="logs">📝 Log System</a>
+    <a class="link-card" href="yuumibook-write.html">➕ Rezept erstellen</a>
+    <button id="theme-toggle" class="link-card theme-button">
+      <span id="theme-icon">🌙</span>
+    </button>
+  </nav>
+</header>
+
+<main>
+  <div id="recipe-reader-header">
+    <div class="search-wrapper" style="flex: 1; min-width: 70%;">
+      <input id="filterText" type="text" placeholder="z.B. Carbonara, Chickenwings, Gemüse ..."
+             onkeydown="if (event.key === 'Enter') getRecipes();" onfocusout="getRecipes()">
+      <button class="search-button" onclick="getRecipes()">Suchen</button>
+    </div>
+    <div id="servingsTextContainer">
+      <span>Portionen:   </span>
+      <label>
+        <input id="servingsText" type="number" value="4">
+      </label>
+    </div>
+  </div>
+
+  <div class="tags-container">
+    <button type="button" class="tag-btn" data-tag="vegan">Vegan</button>
+    <button type="button" class="tag-btn" data-tag="vegetarisch">Vegetarisch</button>
+    <button type="button" class="tag-btn" data-tag="vorspeise">Vorspeise</button>
+    <button type="button" class="tag-btn" data-tag="hauptspeise">Hauptspeise</button>
+    <button type="button" class="tag-btn" data-tag="nachspeise">Nachspeise</button>
+    <button type="button" class="tag-btn" data-tag="suppe">Suppe</button>
+    <button type="button" class="tag-btn" data-tag="salat">Salat</button>
+    <button type="button" class="tag-btn" data-tag="fleischgericht">Fleischgericht</button>
+    <button type="button" class="tag-btn" data-tag="backen">Backen</button>
+    <button type="button" class="tag-btn" data-tag="einfach">Einfach</button>
+    <button type="button" class="tag-btn" data-tag="glutenfrei">Glutenfrei</button>
+    <button type="button" class="tag-btn" data-tag="laktosefrei">Laktosefrei</button>
+    <button type="button" class="tag-btn" data-tag="asiatisch">Asiatisch</button>
+  </div>
+
+  <div id="recipesOutputSection">
+    <div id="recipe-list" class="recipe-list">
+    </div>
+  </div>
+</main>
+
+<footer>
+  Hochschule des Bundes<br>
+  <h6>DACS 23/10-01</h6>
+  <a href="datenschutz.html">Datenschutzerklärung</a>
+  <a href="impressum.html">Impressum</a>
+</footer>
+
+<script src="js/colorscheme.js"></script>
+<script src="js/cursor-highlight.js"></script>
+<script>getRecipes();setupTagButtons();</script>
+</body>
+</html>

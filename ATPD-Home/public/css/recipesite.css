@@ -1,0 +1,224 @@
+:root {
+  /* Light Mode */
+  --bg-color: #f8f8f8;
+  --text-color: #333333;
+  --container-bg: #ffffff;
+  --border-color: #e0e0e0;
+  --primary-text: #333333;
+  --secondary-text: #666666;
+  --accent-color: #4a90e2;
+  --tag-bg: #e0e0e0;
+  --tag-active-bg: #a8d8a8;
+  --action-btn-bg: #ffffff;
+  --action-btn-text: #333333;
+  --action-btn-border: #e0e0e0;
+  --action-btn-hover: #f5f5f5;
+  --action-icon-opacity: 0.9;
+}
+
+:root[data-theme="dark"] {
+  /* Dark Mode */
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --container-bg: #2d2d2d;
+  --border-color: #444444;
+  --primary-text: #e0e0e0;
+  --secondary-text: #aaaaaa;
+  --tag-bg: #444444;
+  --tag-active-bg: #2a5a2a;
+  --action-btn-bg: #2d2d2d;
+  --action-btn-text: #e0e0e0;
+  --action-btn-border: #444444;
+  --action-btn-hover: #3a3a3a;
+  --action-icon-opacity: 0.8;
+}
+
+/* Rezeptkarten-Stil */
+.recipe-card {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: var(--container-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Überschriften */
+.recipe-card h2 {
+  font-size: 2.2rem;
+  color: var(--primary-text);
+  margin-bottom: 5px;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 10px;
+}
+
+.author {
+  font-size: 1.1rem;
+  color: var(--secondary-text);
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+/* Portionen-Auswahl */
+.servings-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.servings-control label {
+  font-weight: 600;
+  color: var(--primary-text);
+}
+
+#servings {
+  width: 60px;
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--container-bg);
+  color: var(--text-color);
+}
+
+.calculate-btn {
+  padding: 8px 15px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.calculate-btn:hover {
+  background-color: #3a7bc8;
+}
+
+/* Zutatenliste */
+.ingredients {
+  margin: 30px 0;
+}
+
+.ingredients h3 {
+  font-size: 1.5rem;
+  color: var(--primary-text);
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 5px;
+}
+
+#ingredientsList {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px 30px;
+}
+
+#ingredientsList li {
+  padding: 8px 0;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+/* Beschreibung */
+.instructions {
+  margin: 30px 0;
+}
+
+.instructions h3 {
+  font-size: 1.5rem;
+  color: var(--primary-text);
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 5px;
+}
+
+.instructions-content {
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+/* Tags */
+.tags-section {
+  margin-top: 30px;
+}
+
+.tags-section h3 {
+  font-size: 1.5rem;
+  color: var(--primary-text);
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 5px;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  padding: 6px 12px;
+  background-color: var(--tag-bg);
+  color: var(--text-color);
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Aktionen-Leiste */
+.recipe-actions {
+  display: flex;
+  gap: 12px;
+  margin: 25px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.action-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid var(--action-btn-border);
+  background-color: var(--action-btn-bg);
+  color: var(--action-btn-text);
+}
+
+.action-btn:hover {
+  background-color: var(--action-btn-hover);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.action-btn .icon {
+  font-size: 1.1rem;
+  opacity: var(--action-icon-opacity);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .recipe-card {
+    padding: 20px;
+  }
+
+  #ingredientsList {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* while printing, hide header/footer and buttons - show atpd watermark*/
+@media print {
+  header, footer, .calculate-btn, button {
+    display: none !important;
+  }
+  #atpd-watermark {
+    display: block !important;
+  }
+}
