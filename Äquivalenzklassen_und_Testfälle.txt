@@ -1,0 +1,89 @@
+																
+Parameter	ÄK		Repräsentanten				Nr.	portions	title	tags	author	description	ingredient.unit	ingredient.amount	ingredient.name	erwartetes Ergebnis
+portions	gÄK1,1	1 - 6	4				1	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+	uÄK1,1	-Number.MAX_VALUE - 0	-276				2	-276	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	g	291.35	Mehl	ungültig
+	uÄK1,2	7 - Number.MAX_VALUE	89				3	89	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	g	291.35	Mehl	ungültig
+	uÄK1,3	NaN	"""Katze"""				4	"""Katze"""	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	g	291.35	Mehl	ungültig
+title	gÄK2,1	String (1 - 50 Zeichen)	"""Kartoffelpuffer"""				5	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+	uÄK2,1	String (51 - Number.MAX_VALUE Zeichen)	"""Dies ist ein Beispieltext mit genau 51 Zeichen Länge!123"""				6	4	51-Zeichen-String	vegetarisch	Chefkoch	Als erstes ...	g	291.35	Mehl	ungültig
+	uÄK2,2	null	""""""				7	4	""""""	vegetarisch	Chefkoch	Als erstes ...	g	291.35	Mehl	ungültig
+tags	gÄK3,1	"""vegetarisch"""	"""vegetarisch"""				8	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+	gÄK3,2	"""vorspeise"""	"""vorspeise"""				9	4	Kartoffelpuffer	vorspeise	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+	gÄK3,3	"""hauptspeise"""	"""hauptspeise"""				10	4	Kartoffelpuffer	hauptspeise	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+	gÄK3,4	"""suppe"""	"""suppe"""				11	4	Kartoffelpuffer	suppe	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+	gÄK3,5	"""salat"""	"""salat"""				12	4	Kartoffelpuffer	salat	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+	gÄK3,6	"""fleischgericht"""	"""fleischgericht"""				13	4	Kartoffelpuffer	fleischgericht	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+	gÄK3,7	"""backen"""	"""backen"""				14	4	Kartoffelpuffer	backen	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+	gÄK3,8	"""einfach"""	"""einfach"""				15	4	Kartoffelpuffer	einfach	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+	gÄK3,9	"""glutenfrei"""	"""glutenfrei"""				16	4	Kartoffelpuffer	glutenfrei	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+	gÄK3,10	"""laktosefrei"""	"""laktosefrei"""				17	4	Kartoffelpuffer	laktosefrei	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+	gÄK3,11	"""asiatisch"""	"""asiatisch"""				18	4	Kartoffelpuffer	asiatisch	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+	gÄK3,12	"""nachspeise"""	"""nachspeise"""				19	4	Kartoffelpuffer	nachspeise	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+	gÄK3,13	keine Tags	/				20	4	Kartoffelpuffer	/	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+	uÄK3,1	None of the above	28392				21	4	Kartoffelpuffer	28392	Chefkoch	Als erstes ...	g	291.35	Mehl	ungültig
+author	gÄK4,1	String (1 - 30 Zeichen)	"""Chefkoch"""				22	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+	uÄK4,1	String (31 - Number.MAX_VALUE Zeichen)	"""Dieser Text hat genau 31 Zeichen!"""				23	4	Kartoffelpuffer	vegetarisch	31-Zeichen-Text	Als erstes ...	g	291.35	Mehl	ungültig
+	uÄK4,2	null	""""""				24	4	Kartoffelpuffer	vegetarisch	""""""	Als erstes ...	g	291.35	Mehl	ungültig
+description	gÄK5,1	String (1 - 5000 Zeichen)	"""Als erstes ..."""				25	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+	uÄK5,1	String (5001 - Number.MAX_VALUE Zeichen)	"""Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis. Etiam imperdiet imperdiet orci. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue. In turpis. Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Nullam sagittis. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id purus. Ut varius tincidunt libero. Phasellus dolor. Maecenas vestibulum mollis..."" "				26	4	Kartoffelpuffer	vegetarisch	Chefkoch	5001-Zeichen-Text	g	291.35	Mehl	ungültig
+	uÄK5,2	null	""""""				27	4	Kartoffelpuffer	vegetarisch	Chefkoch	""""""	g	291.35	Mehl	ungültig
+ingredient.unit	gÄK6,1	"""g"""	"""g"""				28	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+	gÄK6,2	"""kg"""	"""kg"""				29	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	kg	291.35	Mehl	gültig
+	gÄK6,3	"""ml"""	"""ml"""				30	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	ml	291.35	Mehl	gültig
+	gÄK6,4	"""l"""	"""l"""				31	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	tl	291.35	Mehl	gültig
+	gÄK6,5	"""el"""	"""el"""				32	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	etwas	291.35	Mehl	gültig
+	gÄK6,6	"""tl"""	"""tl"""				33	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	pck	291.35	Mehl	gültig
+	gÄK6,7	"""etwas"""	"""etwas"""				34	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	abc	291.35	Mehl	ungültig
+	gÄK6,8	"""pck"""	"""pck"""				35	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+	uÄK6,1	None of the above	abc				36	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	g	"""g"""	Mehl	ungültig
+ingredient.amount	gÄK7,1	0.01 - Number.MAX_VALUE	291.35				37	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	g	-3	Mehl	ungültig
+	uÄK7,1	NaN	"""g"""				38	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+	uÄK7,2	-Number.MAX_VALUE - 0.00	-3				39	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	g	291.35	31-Zeichen-Text	ungültig
+ingredient.name	gÄK8,1	String (1 - 30 Zeichen)	"""Mehl"""				40	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	g	291.35	""""""	ungültig
+	uÄK8,1	String (31 - Number.MAX_VALUE Zeichen)	"""Dieser Text hat genau 31 Zeichen!"""				41	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	kg	291.35	Mehl	gültig
+	uÄK8,2	null	""""""				42	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	ml	291.35	Mehl	gültig
+							43	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	l	291.35	Mehl	gültig
+							44	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	el	291.35	Mehl	gültig
+							45	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	tl	291.35	Mehl	gültig
+							46	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	etwas	291.35	Mehl	gültig
+							47	4	Kartoffelpuffer	vegetarisch	Chefkoch	Als erstes ...	pck	291.35	Mehl	gültig
+							48	4	Kartoffelpuffer	vorspeise	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+							49	4	Kartoffelpuffer	vorspeise	Chefkoch	Als erstes ...	kg	291.35	Mehl	gültig
+	ÄK:	Gültige Testfälle:	= 1 * 1 * 13 * 1 * 1 * 8 * 1 * 1	= 104			50	4	Kartoffelpuffer	vorspeise	Chefkoch	Als erstes ...	ml	291.35	Mehl	gültig
+		Ungültige Testfälle:	= 3 + 2 + 2 + 1 + 2 + 2 +1 + 2	= 15			51	4	Kartoffelpuffer	vorspeise	Chefkoch	Als erstes ...	l	291.35	Mehl	gültig
+							52	4	Kartoffelpuffer	vorspeise	Chefkoch	Als erstes ...	el	291.35	Mehl	gültig
+		Grenzwertanalyse					53	4	Kartoffelpuffer	vorspeise	Chefkoch	Als erstes ...	tl	291.35	Mehl	gültig
+		portions	0				54	4	Kartoffelpuffer	vorspeise	Chefkoch	Als erstes ...	etwas	291.35	Mehl	gültig
+			1				55	4	Kartoffelpuffer	vorspeise	Chefkoch	Als erstes ...	pck	291.35	Mehl	gültig
+			6				56	4	Kartoffelpuffer	hauptspeise	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+			-Number.MAX_VALUE				57	4	Kartoffelpuffer	hauptspeise	Chefkoch	Als erstes ...	kg	291.35	Mehl	gültig
+			Number.MAX_VALUE				58	4	Kartoffelpuffer	hauptspeise	Chefkoch	Als erstes ...	ml	291.35	Mehl	gültig
+		ingredient.amount	0.00				59	4	Kartoffelpuffer	hauptspeise	Chefkoch	Als erstes ...	l	291.35	Mehl	gültig
+			0.01				60	4	Kartoffelpuffer	hauptspeise	Chefkoch	Als erstes ...	el	291.35	Mehl	gültig
+			Number.MAX_VALUE				61	4	Kartoffelpuffer	hauptspeise	Chefkoch	Als erstes ...	tl	291.35	Mehl	gültig
+			-Number.MAX_VALUE				62	4	Kartoffelpuffer	hauptspeise	Chefkoch	Als erstes ...	etwas	291.35	Mehl	gültig
+		title	String (0 Zeichen)				63	4	Kartoffelpuffer	hauptspeise	Chefkoch	Als erstes ...	pck	291.35	Mehl	gültig
+			String (1 Zeichen)				64	4	Kartoffelpuffer	suppe	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+			String (50 Zeichen)				65	4	Kartoffelpuffer	suppe	Chefkoch	Als erstes ...	kg	291.35	Mehl	gültig
+			String (51 Zeichen)				66	4	Kartoffelpuffer	suppe	Chefkoch	Als erstes ...	ml	291.35	Mehl	gültig
+			String (Number.MAX_VALUE Zeichen)				67	4	Kartoffelpuffer	suppe	Chefkoch	Als erstes ...	l	291.35	Mehl	gültig
+		author	String (0 Zeichen)				68	4	Kartoffelpuffer	suppe	Chefkoch	Als erstes ...	el	291.35	Mehl	gültig
+			String (1 Zeichen)				69	4	Kartoffelpuffer	suppe	Chefkoch	Als erstes ...	tl	291.35	Mehl	gültig
+			String (30 Zeichen)				70	4	Kartoffelpuffer	suppe	Chefkoch	Als erstes ...	etwas	291.35	Mehl	gültig
+			String (31 Zeichen)				71	4	Kartoffelpuffer	suppe	Chefkoch	Als erstes ...	pck	291.35	Mehl	gültig
+			String (Number.MAX_VALUE Zeichen)				72	4	Kartoffelpuffer	salat	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+		description	String (0 Zeichen)				73	4	Kartoffelpuffer	salat	Chefkoch	Als erstes ...	kg	291.35	Mehl	gültig
+			String (1 Zeichen)				74	4	Kartoffelpuffer	salat	Chefkoch	Als erstes ...	ml	291.35	Mehl	gültig
+			String (5000 Zeichen)				75	4	Kartoffelpuffer	salat	Chefkoch	Als erstes ...	l	291.35	Mehl	gültig
+			String (5001 Zeichen)				76	4	Kartoffelpuffer	salat	Chefkoch	Als erstes ...	el	291.35	Mehl	gültig
+			String (Number.MAX_VALUE Zeichen)				77	4	Kartoffelpuffer	salat	Chefkoch	Als erstes ...	tl	291.35	Mehl	gültig
+		ingredient.name	String (0 Zeichen)				78	4	Kartoffelpuffer	salat	Chefkoch	Als erstes ...	etwas	291.35	Mehl	gültig
+			String (1 Zeichen)				79	4	Kartoffelpuffer	salat	Chefkoch	Als erstes ...	pck	291.35	Mehl	gültig
+			String (30 Zeichen)				80	4	Kartoffelpuffer	fleischgericht	Chefkoch	Als erstes ...	g	291.35	Mehl	gültig
+			String (31 Zeichen)													
+			String (Number.MAX_VALUE Zeichen)													
+																
+																
+																
+																
+			GWA:	= 29												
